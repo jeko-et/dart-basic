@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:ansicolor/ansicolor.dart';
+import '../ansicolor.dart';
 import '../L6/Avenger.dart';
 import '../L6/Gadget.dart';
 import '../L6/Spiderman.dart';
