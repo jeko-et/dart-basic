@@ -1,5 +1,7 @@
-import '../http.dart' as http;
+import 'package:http/http.dart' as http;
 import 'dart:convert' as JSON;
+import 'dart:math';
+
 abstract class Avenger {
   String name;
   String sexual;
@@ -13,6 +15,8 @@ abstract class Avenger {
     switch (type) {
       case 'Avengers.Thor':
         return new Thor(name: name, sexual: sexual);
+      case 'Avengers.Thanos':
+        return new Thanos(name: name, sexual: sexual);
       case 'Avengers.CaptainAmerica':
         return new CaptainAmerica(name: name, sexual: sexual);
       default:
@@ -51,6 +55,10 @@ class CaptainAmerica extends Avenger implements Thor {
 }
 class Thor extends Avenger {
   Thor({String name, String sexual}) : super.named(name: name, sexual: sexual);
+  void fetchMjolnir(){}
+}
+class Thanos extends Avenger {
+  Thanos({String name, String sexual}) : super.named(name: name, sexual: sexual);
   void fetchMjolnir(){}
 }
 void main() {
